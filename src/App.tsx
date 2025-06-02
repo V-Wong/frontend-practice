@@ -6,7 +6,7 @@ import TicTacToe from "./pages/TicTacToe";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/progress-bar" element={<Progress />} />
