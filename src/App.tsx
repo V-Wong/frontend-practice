@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, Link } from "react-router";
 
-import Home from "./pages/Home";
 import ImageLoader from "./pages/ImageLoader";
 import Progress from "./pages/Progress";
 import TicTacToe from "./pages/TicTacToe";
 import type { JSX } from "react";
+import Page from "./Page";
 
 type PageToElement = {
   path: string;
@@ -21,7 +21,20 @@ function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Page>
+              <ul className="w-full flex flex-col items-center gap-y-3">
+                {PAGES.map(({ path }) => (
+                  <li className="w-full border-green-500 border-2">
+                    <Link to={{ pathname: path }}>{path}</Link>
+                  </li>
+                ))}
+              </ul>
+            </Page>
+          }
+        />
         {PAGES.map(({ path, element }) => (
           <Route path={path} element={element} />
         ))}
