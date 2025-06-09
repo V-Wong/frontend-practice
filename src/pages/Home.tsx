@@ -1,9 +1,10 @@
 import SampleComponent from "../components/SampleComponent";
+import Page from "../Page";
 
 const Home = () => (
-  <div className="min-h-screen h-full flex flex-col items-center pt-5 bg-black">
+  <Page>
     <SampleComponent />
-  </div>
+  </Page>
 );
 
 export default Home;
