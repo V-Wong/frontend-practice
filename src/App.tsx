@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 
 import Home from "./pages/Home";
+import ImageLoader from "./pages/ImageLoader";
 import Progress from "./pages/Progress";
 import TicTacToe from "./pages/TicTacToe";
 
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/progress-bar" element={<Progress />} />
         <Route path="/tic-tac-toe" element={<TicTacToe />} />
+        <Route path="/image-loader" element={<ImageLoader />} />
       </Routes>
     </BrowserRouter>
   );
