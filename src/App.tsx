@@ -26,11 +26,11 @@ function App() {
           path="/"
           element={
             <Page>
-              <ul className="w-full flex flex-col items-center gap-y-3">
+              <ul className="w-full max-w-md flex flex-col items-center gap-y-3">
                 {PAGES.map(({ name, path }) => (
                   <Link
                     to={{ pathname: path }}
-                    className="w-full border-green-500 border-2"
+                    className="w-full text-center border-green-500 border-2"
                   >
                     <li>{name}</li>
                   </Link>
