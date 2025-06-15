@@ -7,14 +7,15 @@ import type { JSX } from "react";
 import Page from "./Page";
 
 type PageToElement = {
+  name: string;
   path: string;
   element: JSX.Element;
 };
 
 const PAGES: PageToElement[] = [
-  { path: "/progress-bar", element: <Progress /> },
-  { path: "/tic-tac-toe", element: <TicTacToe /> },
-  { path: "/image-loader", element: <ImageLoader /> },
+  { name: "Progress Bar", path: "/progress-bar", element: <Progress /> },
+  { name: "Tic Tac Toe", path: "/tic-tac-toe", element: <TicTacToe /> },
+  { name: "Image Loader", path: "/image-loader", element: <ImageLoader /> },
 ];
 
 function App() {
@@ -26,12 +27,12 @@ function App() {
           element={
             <Page>
               <ul className="w-full flex flex-col items-center gap-y-3">
-                {PAGES.map(({ path }) => (
+                {PAGES.map(({ name, path }) => (
                   <Link
                     to={{ pathname: path }}
                     className="w-full border-green-500 border-2"
                   >
-                    <li>{path}</li>
+                    <li>{name}</li>
                   </Link>
                 ))}
               </ul>
