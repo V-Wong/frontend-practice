@@ -5,6 +5,7 @@ import Progress from "./pages/Progress";
 import TicTacToe from "./pages/TicTacToe";
 import type { JSX } from "react";
 import Page from "./Page";
+import DirectoryStructure from "./pages/DirectoryStructure";
 
 type PageToElement = {
   name: string;
@@ -16,6 +17,7 @@ const PAGES: PageToElement[] = [
   { name: "Progress Bar", path: "/progress-bar", element: <Progress /> },
   { name: "Tic Tac Toe", path: "/tic-tac-toe", element: <TicTacToe /> },
   { name: "Image Loader", path: "/image-loader", element: <ImageLoader /> },
+  { name: "File Tree", path: "/file-tree", element: <DirectoryStructure /> },
 ];
 
 function App() {
